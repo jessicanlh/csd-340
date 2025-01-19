@@ -1,0 +1,40 @@
+/* Google Font Setup */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* main color */
+    color: #000000; /* text color */
+}
+
+/* Container Styling */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Headings Styling */
+h1, h2, h3, h4 {
+    background-color: #d3d3d3; /* main color */
+    color: #000000; /* text color */
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+/* Anchor Tag Styling */
+a {
+    color: #0000FF; /* Choose a color that matches your scheme */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF5733; /* Adjust to blend with your color scheme */
+}
+
+a:visited {
+    color: #8A2BE2; /* Adjust to blend with your color scheme */
+}
