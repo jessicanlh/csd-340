@@ -1,87 +1,83 @@
-/* Header Styles */
 header {
-    background-color: #333; /* Dark gray background */
-    color: white; /* White text */
-    padding: 20px; /* Padding around the text */
-    text-align: center; /* Center the text */
+    background-color: #add8e6; /* Pale blue */
+    color: grey;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    font-weight: 400; /* Normal weight */
+    font-weight: 400;
+    color: grey;
 }
 
-/* Navbar Styles */
-#navbar {
-    overflow: hidden; /* Clear floats */
-    background-color: #444; /* Slightly lighter gray */
-    border-bottom: solid 15px #222; /* Darker gray border */
+.navbar {
+    overflow: hidden;
+    background-color: #b0c4de; /* Light steel blue */
+    border-bottom: solid 15px #778899; /* Light slate gray */
 }
 
-#navbar a {
-    float: left; /* Float links to the left */
-    display: block; /* Make links block-level */
-    color: white; /* White text */
-    text-align: center; /* Center the text */
-    padding: 14px 16px; /* Padding around the text */
-    text-decoration: none; /* Remove underline */
+.navbar a {
+    float: left;
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-#navbar a:hover {
-    background-color: #555; /* Light gray background on hover */
-    color: #fff; /* White text */
+.navbar a:hover {
+    background-color: #87ceeb; /* Sky blue */
+    color: #696969; /* Dim gray */
 }
 
-/* Container Styles */
-#container {
-    margin-top: 2%; /* Top margin */
-    margin-left: 5%; /* Left margin */
-    margin-right: 5%; /* Right margin */
-    padding: 10px; /* Padding inside the container */
+.container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
 }
 
-/* Card Styles */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: 0.3s; /* Smooth transition */
-    width: 50%; /* Set width to 50% */
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
 }
 
 .card-title {
-    text-align: center; /* Center the text */
-    font-size: 2em; /* Larger font size */
-    color: #333; /* Dark gray text */
-    font-weight: 400; /* Normal weight */
+    text-align: center;
+    font-size: 2em;
+    color: grey;
+    font-weight: 400;
 }
 
 .card-content {
-    padding: 2px 16px; /* Padding inside the card */
+    padding: 2px 16px;
 }
 
-/* Footer Styles */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
 footer {
-    background-color: #333; /* Dark gray background */
-    position: absolute; /* Position at the bottom */
-    bottom: 0; /* Stick to the bottom */
-    width: 100%; /* Full width */
+    background-color: #add8e6; /* Same as header */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-    color: white; /* White text */
-    font-weight: 400; /* Normal weight */
-    float: right; /* Float text to the right */
-    padding-right: 10px; /* Right padding */
-    font-style: italic; /* Italic text */
+    color: grey;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
 }
 
 footer a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
+    text-decoration: none;
+    color: grey;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
