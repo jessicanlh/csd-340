@@ -1,106 +1,98 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+header {
+    background-color: #add8e6; /* Pale blue */
+    color: grey;
+    padding: 20px;
+    text-align: center;
+}
 
-\f0\fs24 \cf0 header \{\
-    background-color: #add8e6; /* Pale blue */\
-    color: grey;\
-    padding: 20px;\
-    text-align: center;\
-\}\
-\
-h1 \{\
-    font-weight: 400;\
-    color: grey;\
-\}\
-\
-.navbar \{\
-    overflow: hidden;\
-    background-color: #b0c4de; /* Light steel blue */\
-    border-bottom: solid 15px #778899; /* Light slate gray */\
-\}\
-\
-.navbar a \{\
-    float: left;\
-    display: block;\
-    color: grey;\
-    text-align: center;\
-    padding: 14px 16px;\
-    text-decoration: none;\
-\}\
-\
-.navbar a:hover \{\
-    background-color: #87ceeb; /* Sky blue */\
-    color: #696969; /* Dim gray */\
-\}\
-\
-.container \{\
-    margin: 2% 5% 100px 5%;\
-    padding: 10px;\
-\}\
-\
-.card \{\
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\
-    transition: 0.3s;\
-    width: 50%;\
-\}\
-\
-.card-title \{\
-    text-align: center;\
-    font-size: 2em;\
-    color: grey;\
-    font-weight: 400;\
-\}\
-\
-.card-content \{\
-    padding: 2px 16px;\
-\}\
-\
-.card:hover \{\
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);\
-\}\
-\
-#movies \{\
-    border-collapse: collapse;\
-    width: 100%;\
-    margin-bottom: 30px;\
-\}\
-\
-#movies th \{\
-    padding: 12px 0;\
-    text-align: left;\
-\}\
-\
-#movies td \{\
-    border: 1px solid #ddd;\
-    padding: 8px;\
-\}\
-\
-footer \{\
-    background-color: #add8e6; /* Same as header */\
-    position: fixed;\
-    left: 0;\
-    bottom: 0;\
-    width: 100%;\
-\}\
-\
-footer p \{\
-    color: grey;\
-    font-weight: 400;\
-    float: right;\
-    padding-right: 10px;\
-    font-style: italic;\
-\}\
-\
-footer a \{\
-    text-decoration: none;\
-    color: grey;\
-\}\
-\
-footer a:hover \{\
-    text-decoration: underline;\
-\}\
+h1 {
+    font-weight: 400;
+    color: grey;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #b0c4de; /* Light steel blue */
+    border-bottom: solid 15px #778899; /* Light slate gray */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #87ceeb; /* Sky blue */
+    color: #696969; /* Dim gray */
+}
+
+.container {
+    margin: 2% 5% 100px 5%;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: grey;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding: 12px 0;
+    text-align: left;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+footer {
+    background-color: #add8e6; /* Same as header */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: grey;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
