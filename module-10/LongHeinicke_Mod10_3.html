@@ -1,211 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <title>CSD 340 Web Development with HTML and CSS</title>
-
     <script>
-
         function displayImage(imageFile, altText) {
-
             const mainImage = document.getElementById("mainImage");
-
             const caption = document.getElementById("imageCaption");
-
             
-
             mainImage.src = imageFile;
-
             mainImage.alt = altText;
-
             caption.textContent = altText;
-
             
-
             // Add animation effect
-
             mainImage.style.transform = "scale(0.95)";
-
             setTimeout(() => {
-
                 mainImage.style.transform = "scale(1)";
-
             }, 150);
-
         }
-
     </script>
-
     <style>
-
         body {
-
             font-family: 'Arial', sans-serif;
-
             background-color: #f0f0f0;
-
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 20px;
-
         }
-
-
 
         h1 {
-
             color: #2c3e50;
-
             text-align: center;
-
             border-bottom: 3px solid #3498db;
-
             padding-bottom: 10px;
-
         }
-
-
 
         .gallery {
-
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 30px;
-
             margin-top: 40px;
-
         }
-
-
 
         .thumbnail {
-
             border: 3px solid #bdc3c7;
-
             border-radius: 10px;
-
             transition: all 0.3s ease;
-
             cursor: pointer;
-
         }
-
-
 
         .thumbnail:hover {
-
             border-color: #3498db;
-
             transform: translateY(-5px);
-
         }
-
-
 
         #mainDisplay {
-
             text-align: center;
-
             margin: 30px 0;
-
         }
-
-
 
         #mainImage {
-
             border: 5px solid #3498db;
-
             border-radius: 15px;
-
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-
             max-width: 800px;
-
             height: auto;
-
             transition: transform 0.3s ease;
-
         }
-
-
 
         #imageCaption {
-
             color: #3498db;
-
             font-size: 1.2em;
-
             margin-top: 15px;
-
             font-weight: bold;
-
         }
-
     </style>
-
 </head>
-
 <body>
-
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
-
     
-
     <div id="mainDisplay">
-
-        <img id="mainImage" src="placeholder.jpg" alt="Selected Image">
-
+        <img id="mainImage" src="cyoa.png" alt="Selected Image">
         <div id="imageCaption">Select an image to begin</div>
-
     </div>
-
-
 
     <div class="gallery">
-
         <div>
-
-            <img src=“sleepingdragon.JPG” 
-
+            <img src="sleepingdragon.JPG" 
                  class="thumbnail" 
-
-                 onclick="displayImage(‘wakedragon.jpg, ‘You woke the dragon up)”
-
-                 onmouseover="this.src=‘wakingupdragon.JPG’” 
-
-                 onmouseout="this.src=‘sleepingdragon.JPG’”>
-
+                 onclick="displayImage('wakedragon.jpg', 'You woke the dragon up')"
+                 onmouseover="this.src='wakingupdragon.JPG'" 
+                 onmouseout="this.src='sleepingdragon.JPG'">
             <p>Don’t Wake the Dragon</p>
-
         </div>
-
         
-
         <div>
-
-            <img src=“retrieverfar.jpeg" 
-
+            <img src="retrieverfar.jpeg" 
                  class="thumbnail" 
-
-                 onclick="displayImage(‘retreiverclose.jpg')"
-
-                 onmouseover="this.src=‘retriever.jpeg'" 
-
-                 onmouseout="this.src=‘retreiverfar.jpeg'">
-
+                 onclick="displayImage('retreiverclose.jpg', 'Close-up of happy dog')"
+                 onmouseover="this.src='retriever.jpeg'" 
+                 onmouseout="this.src='retrieverfar.jpeg'">
             <p>Dog :)</p>
-
         </div>
-
     </div>
-
 </body>
-
 </html>
