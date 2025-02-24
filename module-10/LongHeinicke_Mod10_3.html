@@ -1,122 +1,211 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+
+        function displayImage(imageFile, altText) {
+
+            const mainImage = document.getElementById("mainImage");
+
+            const caption = document.getElementById("imageCaption");
+
+            
+
+            mainImage.src = imageFile;
+
+            mainImage.alt = altText;
+
+            caption.textContent = altText;
+
+            
+
+            // Add animation effect
+
+            mainImage.style.transform = "scale(0.95)";
+
+            setTimeout(() => {
+
+                mainImage.style.transform = "scale(1)";
+
+            }, 150);
+
+        }
+
+    </script>
+
+    <style>
+
+        body {
+
+            font-family: 'Arial', sans-serif;
+
+            background-color: #f0f0f0;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+        }
+
+
+
+        h1 {
+
+            color: #2c3e50;
+
+            text-align: center;
+
+            border-bottom: 3px solid #3498db;
+
+            padding-bottom: 10px;
+
+        }
+
+
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            margin-top: 40px;
+
+        }
+
+
+
+        .thumbnail {
+
+            border: 3px solid #bdc3c7;
+
+            border-radius: 10px;
+
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .thumbnail:hover {
+
+            border-color: #3498db;
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+        #mainDisplay {
+
+            text-align: center;
+
+            margin: 30px 0;
+
+        }
+
+
+
+        #mainImage {
+
+            border: 5px solid #3498db;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+            max-width: 800px;
+
+            height: auto;
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        #imageCaption {
+
+            color: #3498db;
+
+            font-size: 1.2em;
+
+            margin-top: 15px;
+
+            font-weight: bold;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;CSD 340 Web Development with HTML and CSS&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function displayImage(imageFile, altText) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mainImage = document.getElementById("mainImage");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const caption = document.getElementById("imageCaption");</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>mainImage.src = imageFile;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mainImage.alt = altText;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>caption.textContent = altText;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Add animation effect</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mainImage.style.transform = "scale(0.95)";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>mainImage.style.transform = "scale(1)";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}, 150);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f0f0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.gallery {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(2, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.thumbnail {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 3px solid #bdc3c7;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.thumbnail:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>#mainDisplay {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>#mainImage {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 5px solid #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0,0,0,0.2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>#imageCaption {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #3498db;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Assignment 10.3: JavaScript - Part 2&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="mainDisplay"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img id="mainImage" src="placeholder.jpg" alt="Selected Image"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="imageCaption"&gt;Select an image to begin&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="gallery"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src=“sleepingdragon.JPG”<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>class="thumbnail"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onclick="displayImage(‘wakedragon.jpg, ‘You woke the dragon up)”</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onmouseover="this.src=‘wakingupdragon.JPG’”<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onmouseout="this.src=‘sleepingdragon.JPG’”&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Don’t Wake the Dragon&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src=“retrieverfar.jpeg"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>class="thumbnail"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onclick="displayImage(‘retreiverclose.jpg')"</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onmouseover="this.src=‘retriever.jpeg'"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                 </span>onmouseout="this.src=‘retreiverfar.jpeg'"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Dog :)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    
+
+    <div id="mainDisplay">
+
+        <img id="mainImage" src="placeholder.jpg" alt="Selected Image">
+
+        <div id="imageCaption">Select an image to begin</div>
+
+    </div>
+
+
+
+    <div class="gallery">
+
+        <div>
+
+            <img src=“sleepingdragon.JPG” 
+
+                 class="thumbnail" 
+
+                 onclick="displayImage(‘wakedragon.jpg, ‘You woke the dragon up)”
+
+                 onmouseover="this.src=‘wakingupdragon.JPG’” 
+
+                 onmouseout="this.src=‘sleepingdragon.JPG’”>
+
+            <p>Don’t Wake the Dragon</p>
+
+        </div>
+
+        
+
+        <div>
+
+            <img src=“retrieverfar.jpeg" 
+
+                 class="thumbnail" 
+
+                 onclick="displayImage(‘retreiverclose.jpg')"
+
+                 onmouseover="this.src=‘retriever.jpeg'" 
+
+                 onmouseout="this.src=‘retreiverfar.jpeg'">
+
+            <p>Dog :)</p>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
