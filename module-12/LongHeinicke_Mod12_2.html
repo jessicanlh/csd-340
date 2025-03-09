@@ -10,14 +10,16 @@
     <div id="container">
         <h1>Assignment 12.2: JavaScript - Part 4</h1>
 
-        <div style="margin-bottom: 20px;">
-            <button onclick="sortAscending()">Top to Bottom</button>
-            <button onclick="sortDescending()">Bottom to Top</button>
-        </div>
-
         <div style="display: flex; justify-content: space-between;">
-            <div style="width: 45%;" id="bookList">
-                <!-- Dynamic book list will be inserted here -->
+            <div style="width: 45%;">
+                <h3>Top 10 Favorite Books</h3>
+                <div style="margin-bottom: 10px;">
+                    <button onclick="sortAscending()">Top to Bottom</button>
+                    <button onclick="sortDescending()">Bottom to Top</button>
+                </div>
+                <div id="bookList">
+                    <!-- Dynamic book list will be inserted here -->
+                </div>
             </div>
 
             <div style="width: 45%;">
@@ -68,7 +70,6 @@
         function displayBooks(bookArray) {
             const listContainer = document.getElementById('bookList');
             listContainer.innerHTML = `
-                <h3>Top 10 Favorite Books</h3>
                 <ol>
                     ${bookArray.map(book => `<li>${book}</li>`).join('')}
                 </ol>
