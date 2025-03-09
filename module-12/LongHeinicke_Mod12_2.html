@@ -13,16 +13,31 @@
             <button onclick="sortAscending()">Top to Bottom</button>
             <button onclick="sortDescending()">Bottom to Top</button>
         </div>
-        
-        <div id="bookList"></div>
 
-        <div style="margin-top: 20px; width: 100%;">
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="width: 45%;" id="bookList">
+                <!-- Dynamic book list will appear here -->
+            </div>
+
+            <div style="width: 45%;">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Creating a webpages</li>
+                    <li>Creating a Git Page</li>
+                    <li>Formatting webpages</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 60%; width: 100%;">
             <a href="index.html" style="float: right;">Back to Landing Page</a>
         </div>
     </div>
 
     <script>
-        // Original book array
+        // Original book array (preserves initial order)
         const books = [
             "Lord Of the Rings",
             "Harry Potter",
@@ -36,23 +51,23 @@
             "The Dresden Files"
         ];
 
-        // Initial display
+        // Initial display of books
         displayBooks(books);
 
         function sortAscending() {
-            const sorted = [...books].sort((a, b) => a.localeCompare(b));
-            displayBooks(sorted);
+            const sortedBooks = [...books].sort((a, b) => a.localeCompare(b));
+            displayBooks(sortedBooks);
         }
 
         function sortDescending() {
-            const sorted = [...books].sort((a, b) => b.localeCompare(a));
-            displayBooks(sorted);
+            const sortedBooks = [...books].sort((a, b) => b.localeCompare(a));
+            displayBooks(sortedBooks);
         }
 
-        function displayBooks(bookArray) {
-            const bookList = document.getElementById('bookList');
-            bookList.innerHTML = '<h3>Top 10 Favorite Books</h3><ol>' + 
-                bookArray.map(book => `<li>${book}</li>`).join('') + 
+        function displayBooks(booksArray) {
+            const listContainer = document.getElementById('bookList');
+            listContainer.innerHTML = '<h3>Top 10 Favorite Books</h3><ol>' + 
+                booksArray.map(book => `<li>${book}</li>`).join('') + 
                 '</ol>';
         }
     </script>
