@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;CSD 340 Web Development with HTML and CSS&lt;/title&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Assignment 12.2: JavaScript - Part 4&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="sortAscending()"&gt;Top to Bottom&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="sortDescending()"&gt;Bottom to Top&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="bookList"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top: 20px; width: 100%;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="index.html" style="float: right;"&gt;Back to Landing Page&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Original book array</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const books = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Lord Of the Rings",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Harry Potter",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Legends and Lattes",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Pride and Prejudice",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Babel",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"The Poppy War",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Godkiller",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"The Divine Comedy",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Howl’s Moving Castle",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"The Dresden Files"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initial display</p>
+<p class="p1"><span class="Apple-converted-space">        </span>displayBooks(books);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function sortAscending() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sorted = [...books].sort((a, b) =&gt; a.localeCompare(b));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayBooks(sorted);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function sortDescending() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sorted = [...books].sort((a, b) =&gt; b.localeCompare(a));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayBooks(sorted);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayBooks(bookArray) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const bookList = document.getElementById('bookList');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bookList.innerHTML = '&lt;h3&gt;Top 10 Favorite Books&lt;/h3&gt;&lt;ol&gt;' +<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>bookArray.map(book =&gt; `&lt;li&gt;${book}&lt;/li&gt;`).join('') +<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>'&lt;/ol&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
