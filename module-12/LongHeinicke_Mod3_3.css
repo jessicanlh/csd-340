@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    padding: 10px;
+    list-style-position: inside;
+    font-weight: 300;
+}
+
+/* Ordered List Styling */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+/* Unordered List Styling */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    list-style-type: upper-roman;
+}
+
+/* Container Div */
+#container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Side-by-side Divs */
+#left-div,
+#right-div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Last Div Styling */
+#bottom-div {
+    width: 100%;
+    margin-top: 60px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
